@@ -3,6 +3,9 @@ let gameScore = [];
 function play(id){
     let player = document.getElementById('player');
     let selectedBox = document.getElementById(id);
+
+    if(selectedBox.innerText === 'X' || selectedBox.innerText === 'O') return;
+
     selectedBox.innerText = player.innerText;
     gameScore[id] = player.innerText;
     // console.log(selectedBox.innerText);
